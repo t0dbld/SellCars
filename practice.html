@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <TITLE>Steve Gottlieb Broker</TITLE>
+
+    <script src="../bower_components/platform/platform.js"></script>
+    <link rel="import" 
+    href="../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
+    <link rel="import"
+      href="../bower_components/font-roboto/roboto.html">
+    <link rel="import"
+      href="../bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import"
+      href="../bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import"
+      href="../bower_components/core-drawer-panel/core-drawer-panel.html"
+    <link rel="import"
+      href="../bower_components/core-header-panel/core-header-panel.html">
+    <link rel ="import"
+      href="../bower_components/core-icon-button/core-icon-button.html">
+    <link rel="import"
+      href="lorem-element.html">
+    <link rel="import"
+      href="sample-content.html">
+
+  </head>
+  <body unresolved fullbleed layout Verticle>
+  <core-drawer-panel drawer responsiveWidth="1000px">
+    <core-header-panel>
+      <core-toolbar></core-toolbar>
+      <div>Drawer Content</div>
+    </core-header-panel>
+    <core-scroll-header-panel  condenses flex main>
+      <core-toolbar class="tall">
+        <core-icon-button icon="arrow-back"></core-icon-button>
+      </core-toolbar>
+      <div class="content">
+        <sample-content size="100"></sample-content>
+        <sample-content size="75"></sample-content>
+        <sample-content size="50"></sample-content>
+        <sample-content size="25"></sample-content>
+      </div>
+    </core-scroll-header-panel>
+  </core-drawer-panel>
+
+    
+
+
+  </body>
+</html>
