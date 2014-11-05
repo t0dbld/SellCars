@@ -17,19 +17,24 @@
       href="../bower_components/core-drawer-panel/core-drawer-panel.html"
     <link rel="import"
       href="../bower_components/core-header-panel/core-header-panel.html">
+    <link rel ="import"
+      href="../bower_components/core-icon-button/core-icon-button.html">
 
   </head>
   <body unresolved>
   <core-drawer-panel drawer>
     <core-header-panel>
-      <core-toolbar>Core Toolbar</core-toolbar>
-    <div>Drawer Content</div>
+      <core-toolbar></core-toolbar>
+      <div>Drawer Content</div>
     </core-header-panel>
-    <core-scroll-header-panel main>
-    <core-toolbar> main toolbar</core-toolbar>
-    <div>Main Content</div>
+    <core-scroll-header-panel  condenses main>
+      <core-toolbar class="tall">
+        <core-icon-button icon="arrow-back"></core-icon-button>
+        
+      </core-toolbar>
+      <div>Main Content</div>
     </core-scroll-header-panel>
-    </core-drawer-panel>
+  </core-drawer-panel>
 
     
 
