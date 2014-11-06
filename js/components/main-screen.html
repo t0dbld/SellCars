@@ -1,7 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../sample-content.html">
 <link rel="import" href="../../bower_componenets/core-pages/core-pages.html">
-<polymer-element name="main-screen">
+<polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
 
@@ -9,7 +9,7 @@
 
       <core-header-panel navigation flex>
         <core-toolbar>
-          <span>Menu</span>
+          <span>{{menuTitle}}</span>
         </core-toolbar>
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
@@ -20,7 +20,7 @@
       </core-header-panel>
  
       <span tool>
-        Steve Gottlieb Broker
+        {{mainTitle}}
       </span>
 
        <div fit class="content">
@@ -36,10 +36,15 @@
   </template>
 
   <script>
-
-    Polymer("main-screen", {
+ Polymer("main-screen", {
       ready: function() {
-        console.log("Main screen is ready!")
+        this.pages = this.$.pages;
+      },
+      selectAction: function (e, detail) {
+        if (detail.isSelected) {
+          var selectedItem = detail.item;
+          this.pages.selected = selectedItem.attributes.num.nodeValue;
+        }
       }
     });
 
