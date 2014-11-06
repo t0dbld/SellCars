@@ -30,7 +30,7 @@ core-scaffold::shadow core-toolbar {
     background: #000000;
     color: #fafafa;
     background-image: url("../../car.png")
-    size: 300px;
+    size: 700px;
     
 }
 /* content of the right panel */
