@@ -29,8 +29,7 @@ http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-p
 core-scaffold::shadow core-toolbar {
     background: #000000;
     color: #fafafa;
-    background-image: url("../../car.png")
-    size: 700px;
+    background-image: url("../../car.png");
     
 }
 /* content of the right panel */
@@ -41,6 +40,5 @@ core-scaffold::shadow core-header-panel {
 
 core-scroll-header-panel::shadow core-toolbar {
     color: #fafafa;
-
     
 }
