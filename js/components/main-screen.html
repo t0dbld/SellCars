@@ -4,7 +4,7 @@
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
-
+    <link rel="stylesheet" href="main-screen.css">
     <core-scaffold>
 
       <core-header-panel navigation flex>
@@ -21,8 +21,8 @@
  
       <span tool>
         {{mainTitle}}
+        <paper-shadow z="1"></paper-shadow>
       </span>
-
        <div fit class="content">
         <h1>Polymer Rocks!</h1>
         <core-pages id="pages" selected="0">
