@@ -38,7 +38,8 @@ core-scaffold::shadow core-header-panel {
     color: #fafafa;
 }
 
-core-scroll-header-panel::shadow core-toolbar {
+core-scaffold::core-scroll-header-panel::shadow core-toolbar {
     color: #fafafa;
+
     
 }
