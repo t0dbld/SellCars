@@ -32,8 +32,8 @@ core-scaffold::shadow core-toolbar {
 }
 /* content of the right panel */
 core-scaffold::shadow core-header-panel {
-    background: #ffccbc;
-    color: #212121;
+    background: #000000;
+    color: #fafafa;
 }
 
 
