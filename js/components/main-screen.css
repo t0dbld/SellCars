@@ -29,7 +29,7 @@ http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-p
 core-scaffold::shadow core-toolbar {
     background: #000000;
     color: #fafafa;
-    background-image: url("../../car.png");
+    
     
 }
 /* content of the right panel */
