@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../sample-content.html">
-
+<link rel="import" href="../../bower_componenets/core-pages/core-pages.html">
 <polymer-element name="main-screen">
 
   <template>
@@ -11,19 +11,25 @@
         <core-toolbar>
           <span>Menu</span>
         </core-toolbar>
-        <core-menu>
-          <core-item label="About Us" icon="android"></core-item>
-          <core-item label="Contact Us" icon="bug-report"></core-item>
-          <core-item label="Account" icon="account-circle"></core-item>
+        <core-menu on-core-select="{{selectAction}}">
+          <!-- num is personnalized attribute -->
+          <core-item num="0" label="Android" icon="android"></core-item>
+          <core-item num="1" label="Bug Report" icon="bug-report"></core-item>
+          <core-item num="2" label="Account" icon="account-circle"></core-item>
         </core-menu>
       </core-header-panel>
  
-      <span tool tall>
+      <span tool>
         Steve Gottlieb Broker
       </span>
 
-      <div fit>
-        <h1><sample-content size="100"></sample-content></h1>
+       <div fit class="content">
+        <h1>Polymer Rocks!</h1>
+        <core-pages id="pages" selected="0">
+          <div>You have selected "Android"</div>
+          <div>You have selected "Bug Report"</div>
+          <div>You have selected "Account"</div>
+        </core-pages>
       </div>
 
     </core-scaffold>
