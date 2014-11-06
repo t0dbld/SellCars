@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../sample-content.html">
 <link rel="import" href="../../bower_components/core-pages/core-pages.html">
+<link rel="import" href="../../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
@@ -23,6 +24,7 @@
         {{mainTitle}}
         <paper-shadow z="1"></paper-shadow>
       </span>
+      <core-scroll-header-panel condeses flex main></core-scroll-header-panel>
        <div fit class="content">
         <h1>Polymer Rocks!</h1>
         <core-pages id="pages" selected="0">
