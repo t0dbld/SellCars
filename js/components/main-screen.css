@@ -26,11 +26,11 @@ http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-p
 */
 
 /* title bar of the right panel */
-core-scaffold::shadow core-toolbar {
+/*core-scaffold::shadow core-toolbar {
     background: #000000;
-    color: #fafafa;
+    color: #fafafa; 
     
-}
+} */
 /* content of the right panel */
 core-scaffold::shadow core-header-panel {
     background: #616161;
