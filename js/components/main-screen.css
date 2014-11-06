@@ -37,6 +37,6 @@ core-scaffold::shadow core-header-panel {
     color: #fafafa;
 }
 
-core-scroll-header-panel {
+core-scroll-header-panel::shadow core-toolbar {
     background-image: url("../../car.png");
 }
