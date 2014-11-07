@@ -57,9 +57,9 @@ core-scroll-header-panel::shadow core-toolbar {
 /* img border in content section */
 img {
     border: 1px solid #bebebe;
-    padding: 5px;
+    padding: 16px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 16px;
     background-color: #fff;
     color:#555;
 }
