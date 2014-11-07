@@ -19,21 +19,14 @@ core-header-panel {
 
 core-item {
     border: 1px solid #bebebe;
-    padding: 5px;
+    padding: 16px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 16px;
     background-color: #fff;
     color:#555;
 }
 
-img {
-    border: 1px solid #bebebe;
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-    background-color: #fff;
-    color:#555;
-}
+
 
 .content {
     padding: 20px;
@@ -59,4 +52,14 @@ core-scaffold::shadow core-header-panel {
 core-scroll-header-panel::shadow core-toolbar {
     color: #fafafa;
     
+}
+
+/* img border in content section */
+img {
+    border: 1px solid #bebebe;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #fff;
+    color:#555;
 }
