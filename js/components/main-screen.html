@@ -2,6 +2,7 @@
 <link rel="import" href="../../sample-content.html">
 <link rel="import" href="../../bower_components/core-pages/core-pages.html">
 <link rel="import" href="../../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
+<link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
@@ -14,9 +15,9 @@
         </core-toolbar>
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
-          <paper-shadow z="3"><core-item num="0" label="About Us" icon="android"></core-item></paper-shadow>
-          <paper-shadow z="3"><core-item num="1" label="How to Buy" icon="bug-report"></core-item></paper-shadow>
-          <paper-shadow z="3"><core-item num="2" label="Account" icon="account-circle"></core-item></paper-shadow>
+          <paper-ripple><paper-shadow z="3"><core-item num="0" label="About Us" icon="android"></core-item></paper-shadow></paper-ripple>
+          <paper-ripple><paper-shadow z="3"><core-item num="1" label="How to Buy" icon="bug-report"></core-item></paper-shadow></paper-ripple>
+          <paper-ripple><paper-shadow z="3"><core-item num="2" label="Account" icon="account-circle"></core-item></paper-shadow></paper-ripple>
         </core-menu>
       </core-header-panel>
  
