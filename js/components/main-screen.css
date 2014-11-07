@@ -17,7 +17,7 @@ core-header-panel {
     color: #fafafa;
 }
 
-core-header-panel::shadow core-item {
+core-item {
     border: 1px solid #bebebe;
     padding: 5px;
     border-radius: 5px;
