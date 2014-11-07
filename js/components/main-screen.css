@@ -26,6 +26,15 @@ core-item {
     color:#555;
 }
 
+img {
+    border: 1px solid #bebebe;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #fff;
+    color:#555;
+}
+
 .content {
     padding: 20px;
 }
