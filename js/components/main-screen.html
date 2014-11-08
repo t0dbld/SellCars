@@ -20,7 +20,7 @@
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
           <core-item num="0" label="About Us" icon="android"></core-item>
-          <core-item num="1" label="How to Buy" icon="bug-report"></core-item>
+          <core-item num="1" core-overlay-toggle label="How to Buy" icon="bug-report"></core-item>
           <core-item num="2" label="Account" icon="account-circle"></core-item>
         </core-menu>
       </core-header-panel>
@@ -36,7 +36,7 @@
         <h1></h1>
         <core-pages id="pages" selected="0">
           <div><sample-content size="100"></sample-content></div>
-          <div name="x-dialog"><core-overlay id="overlay" layered backdrop opened="{{opened}}" autoclosedisabled="{{autoCloseDisabled}}" transition="core-transition-center">
+          <div><core-overlay>
                 <h2>Dialog</h2>
                 <input placeholder="say something..." autofocus>
                 <div>I agree with this wholeheartedly.</div>
@@ -50,17 +50,6 @@
   </template>
 
   <script>
-    Polymer('x-dialog', {
-  
-    ready: function() {
-      this.$.overlay.target = this;
-    },
-
-    toggle: function() {
-      this.$.overlay.toggle();
-    }
-
-  });
 
     Polymer("main-screen", {
       ready: function() {
