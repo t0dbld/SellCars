@@ -4,6 +4,7 @@
 <link rel="import" href="../../bower_components/core-scroll-header-panel/core-scroll-header-panel.html">
 <link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
 <link rel="import" href="../../about-us.html">
+<link rel="import" href="../../bower_components/core-overlay/core-overlay.html">
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
@@ -33,7 +34,12 @@
         <h1></h1>
         <core-pages id="pages" selected="0">
           <div><sample-content size="100"></sample-content></div>
-          <div><about-us fit></about-us></div>
+          <div><core-overlay>
+                <h2>Dialog</h2>
+                <input placeholder="say something..." autofocus>
+                <div>I agree with this wholeheartedly.</div>
+                <button core-overlay-toggle>OK</button>
+                </core-overlay></div>
           <div>You have selected "Account"</div>
         </core-pages>
       </div>
