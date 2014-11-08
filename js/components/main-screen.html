@@ -7,6 +7,7 @@
 <link rel="import" href="../../bower_components/core-overlay/core-overlay.html">
 <link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
 <link rel="import" href="../../bower_components/core-input/core-input.html">
+<link rel="import" hred="contact-us.html">
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
@@ -36,13 +37,7 @@
         <h1></h1>
         <core-pages id="pages" selected="0">
           <div><sample-content size="100"></sample-content></div>
-          <div><core-overlay>
-                <h2>Dialog</h2>
-                <input placeholder="say something..." autofocus>
-                <div>I agree with this wholeheartedly.</div>
-                <button core-overlay-toggle>OK</button>
-                </core-overlay></div>
-          <div>You have selected "Account"</div>
+          <div><contact-us></contact-us></div>
         </core-pages>
       </div>
 

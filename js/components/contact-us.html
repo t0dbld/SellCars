@@ -1,0 +1,32 @@
+<polymer-element name="x-dialog">
+<template>
+<style>
+
+</style>
+<button on-tap="{{toggle}}">Toggle Dialog</button>
+
+<core-overlay id="overlay" layered backdrop>
+  <content></content>
+  <button core-overlay-toggle>OK</button>
+</core-overlay>
+
+</template>
+<script>
+
+Polymer('x-dialog', {
+
+  toggle: function() {
+
+    this.$.overlay.toggle();
+  }
+});
+
+</script>
+</polymer-element>
+
+<x-dialog id="dialog" >
+<h2>Dialog</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla sapien sed   enim sollicitudin laoreet. Suspendisse suscipit, metus ac volutpat sodales, libero magna semper lacus, molestie fringilla massa orci ut arcu. Nullam sodales urna sit amet odio vehicula mattis.</div><br><br>
+
+
+ </x-dialog>
