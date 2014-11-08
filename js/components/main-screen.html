@@ -21,7 +21,7 @@
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
           <core-item num="0" label="About Us" icon="android"></core-item>
-          <core-item num="1" core-overlay-toggle "{{toggle}}" label="How to Buy" icon="bug-report"></core-item>
+          <core-item num="1" core-overlay-toggle="{{toggle}}" label="How to Buy" icon="bug-report"></core-item>
           <core-item num="2" label="Account" icon="account-circle"></core-item>
         </core-menu>
       </core-header-panel>
@@ -37,7 +37,7 @@
         <h1></h1>
         <core-pages id="pages" selected="0">
           <div><sample-content size="100"></sample-content></div>
-          <div><contact-us></contact-us></div>
+          <div><contact-us id="x-dialog"></contact-us></div>
         </core-pages>
       </div>
 
@@ -45,6 +45,15 @@
   </template>
 
   <script>
+
+Polymer('x-dialog', {
+
+  toggle: function() {
+
+    this.$.overlay.toggle();
+  }
+});
+
 
     Polymer("main-screen", {
       ready: function() {
