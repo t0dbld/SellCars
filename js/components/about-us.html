@@ -1,0 +1,38 @@
+<polymer-element name="about-us" attributes="size">
+<script>
+	(function() {
+
+		var string0 = "Shop when you want, where you want, and get it for a price that will make your friends jealous!";
+
+		var string1 = "With more than 30 years of automotive experience, we bring to you a whole new way of buying pre-owned vehichles. Shop with confidence on your terms, Available to you 24-7, 365 days a year! You no longer need to leave work early to go deal with pushy salesman before dealerships closes. Limitless selection, not just whats on the lot. All at prices dealerships can not compete with!";
+
+		var string2 = "Steve Gottlieb Broker is a company that works for you, how it works is simple. Email, Call, Tweet or however you wish to reach us let us know what your looking for and with in hours have vehicles complete with VIN, pictures, condition reports sent to your email for you to browse at your conveinence. Once you find one you like simply email us back letting us know and after we collect a deposit well obtain the vehicle for you, and ship it to your front door just as soon as the balance has been paid.";
+
+		var string3 = "Want to know how we can possibly do all this? Sure well let you in, Liscensed Dealers buy the cars on their lots from Dealer Only Auctions, they than mark them up accordingly and try to sell them to you. At Steve Gottlieb Broker, we don't try to sell you our cars, we don't have a lot full of guesses that we tell you you will love, because we think the customer knows what they want and they should get exactly that. Best of all because we are not paying for bad guesses, lot storage, and pushy salesman neither are you! When you contact us we search all the dealer auctions for the vehicle you are looking for (about 250,000 cars daily) when we find EXACTLY what you want we enter the auction and buy the vehichle for you. Once payment in full has been made to us, we will ship the car right to your home or place of work. Do all your shopping from your home or mobile phone, shop when you want, where you want, and get it for a price that will make your friends jealous";
+	
+
+	Polymer('about-us', {
+
+      size: 0,
+
+      sizeChanged: function() {
+        this.innerHTML = '';
+        for (var i = 0; i < this.size; i++) {
+          this.innerHTML +=
+            '<div style="border: 1px solid #bebebe; padding: 16px; margin: 16px; border-radius: 5px; background-color: #fff; color: #555;">' +
+            '<div style="display: inline-block; height: 64px; width: 64px; border-radius: 50%; background: #ddd; line-height: 64px; font-size: 30px; color: #666; text-align: center;">'+'</div>' +
+            '<div style="font-size: 25px; padding: 8px 0 16px; color: #888;">' + string0 + '</div>' +
+            '<div style="font-size: 20px; padding-bottom: 8px;">' + string1 + '</div>' +
+            '<div style="font-size: 20px; padding-bottom: 8px;">' + string2 + '</div>' +
+            '<div style="font-size: 20px; padding-bottom: 8px;">' + string3 + '</div>' +
+            '</div>';
+        }
+      }
+
+    });
+  })();
+
+</script>
+
+
+</polymer-element>
