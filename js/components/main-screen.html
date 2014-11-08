@@ -36,7 +36,13 @@
         <h1></h1>
         <core-pages id="pages" selected="0">
           <div><sample-content size="100"></sample-content></div>
-          <div><about-us></about-us></div>
+          <div name="x-dialog"><core-overlay id="overlay" layered backdrop opened="{{opened}}" autoclosedisabled="{{autoCloseDisabled}}" transition="core-transition-center">
+                <h2>Dialog</h2>
+                <input placeholder="say something..." autofocus>
+                <div>I agree with this wholeheartedly.</div>
+                <button core-overlay-toggle>OK</button>
+                </core-overlay></div>
+          <div>You have selected "Account"</div>
         </core-pages>
       </div>
 
@@ -44,6 +50,17 @@
   </template>
 
   <script>
+    Polymer('x-dialog', {
+  
+    ready: function() {
+      this.$.overlay.target = this;
+    },
+
+    toggle: function() {
+      this.$.overlay.toggle();
+    }
+
+  });
 
     Polymer("main-screen", {
       ready: function() {
