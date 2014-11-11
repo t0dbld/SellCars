@@ -1,0 +1,36 @@
+<link rel="import" href="../../bower_components/google-map/google-map.html">
+
+<polymer-element name="locate-us">
+
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #google_map {
+        width: 97%;
+        height: 500px;
+        display: block;
+        left: 10px;
+        top: 130px;
+        position: absolute;
+      }
+    </style>
+    <google-map latitude="42.548650" longitude="-83.144132" fitToMarkers  zoom="15" id="google_map">
+    <google-map-marker latitude="42.548650" longitude="-83.144132"
+      draggable="false" title="Our Office"></google-map-marker>
+    <google-map-marker latitude="42.551147" longitude="-83.114345" draggable="false" title="Our Warehouse"></google-map-marker></google-map>
+  </template>
+
+  <script>
+
+    Polymer({
+      
+    });
+
+  </script>
+
+</polymer-element>
