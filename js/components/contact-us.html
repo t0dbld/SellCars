@@ -1,32 +1,80 @@
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
 <polymer-element name="contact-us">
-<template>
-<style>
 
-</style>
-<button on-tap="{{toggle}}">Toggle Dialog</button>
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #aboutus-header {
+        color: #fff;
+        font-weight: bold;
+        font-size: 22px;
+      }
+      #paper_input {
+        border: 1px solid #bebebe;
+        background-color: #fff;
+        color:#555;
+        padding: 15px;
+        left: 10px;
+        top: 90px;
+        position: absolute;
+      }
+      #paper_input1 {
+        border: 1px solid #bebebe;
+        background-color: #fff;
+        color:#555;
+        padding: 15px;
+        left: 375px;
+        top: 90px;
+        position: absolute;
+      }
+      #paper_input2 {
+        border: 1px solid #bebebe;
+        background-color: #fff;
+        color:#555;
+        padding: 15px;
+        left: 10px;
+        top: 160px;
+        position: absolute;
+      }
+      #paper_dropdown {
+        border: 1px solid #bebebe;
+        background-color: #fff;
+        color:#555;
+        padding: 15px;
+        left: 10px;
+        top: 225px;
+        position: absolute;
+      }
+      #submit_button {
+        color: #555;
+        left: 10px;
+        top: 325px;
+        position: absolute;
+        background-color: rgb(250, 247, 247);
+      }
+    </style>
+    <H1 id="aboutus-header">Want us to find your next car, fill out the form below and well start looking right now!</H1>
+    <div><paper-input willvalidate placeholder="First Name" id="paper_input"></paper-input></div>
+    <div><paper-input willvalidate placeholder="Last Name" id="paper_input1"></paper-input></div>
+    <div><paper-input willvalidate placeholder="email" id="paper_input2"></paper-input></div>
+    <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div>
+    <div><paper-button raised id="submit_button">Submit</paper-button></div>
+  </template>
 
-<core-overlay id="overlay" layered backdrop>
-  <content></content>
-  <button core-overlay-toggle>OK</button>
-</core-overlay>
+  <script>
 
-</template>
-<script>
+    Polymer({
+      
+    });
 
-Polymer('contact-us', {
+  </script>
 
-  toggle: function() {
-
-    this.$.overlay.toggle();
-  }
-});
-
-</script>
 </polymer-element>
-
-<x-dialog id="dialog" >
-<h2>Dialog</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla sapien sed   enim sollicitudin laoreet. Suspendisse suscipit, metus ac volutpat sodales, libero magna semper lacus, molestie fringilla massa orci ut arcu. Nullam sodales urna sit amet odio vehicula mattis.</div><br><br>
-
-
- </x-dialog>
