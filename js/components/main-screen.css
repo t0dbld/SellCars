@@ -56,10 +56,11 @@ core-scaffold::shadow core-header-panel {
 
 /* img border in content section */
 img {
+
     border: 1px solid #bebebe;
     padding: 16px;
     border-radius: 5px;
-    margin: 5px;
+    margin: 10px;
     background-color: #fff;
     color:#555;
     width: 85%;
