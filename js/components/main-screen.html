@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="main-screen.css">
     <core-scaffold>
 
-      <core-header-panel navigation autoclose flex>
+      <core-header-panel navigation flex>
         <core-toolbar>
           <span>{{menuTitle}}</span>
         </core-toolbar>
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
-          <core-item num="0" onclick="document.querySelector('#close').closeDrawer()"label="About Us" icon="home"></core-item>
-          <core-item num="1" onclick="document.querySelector('#close').closeDrawer()"core-overlay-toggle label="Contact Us" icon="mail"></core-item>
-          <core-item num="2" onclick="document.querySelector('#close').closeDrawer()"label="The Team" icon="account-circle"></core-item>
-          <core-item num="3" onclick="document.querySelector('#close').closeDrawer()"label="Locate Us" icon="file-map"></core-item>
-          <core-item num="4" onclick="document.querySelector('#close').closeDrawer()"label="Testimonials" icon="announcement"></core-item>
+          <core-item num="0" label="About Us" icon="home"></core-item>
+          <core-item num="1" core-overlay-toggle label="Contact Us" icon="mail"></core-item>
+          <core-item num="2" label="The Team" icon="account-circle"></core-item>
+          <core-item num="3" label="Locate Us" icon="file-map"></core-item>
+          <core-item num="4" label="Testimonials" icon="announcement"></core-item>
         </core-menu>
       </core-header-panel>
 
@@ -51,7 +51,6 @@
   </template>
 
   <script>
-
 
     Polymer("main-screen", {
       ready: function() {
