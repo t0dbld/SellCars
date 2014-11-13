@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="main-screen.css">
     <core-scaffold>
 
-      <core-header-panel navigation flex>
+      <core-header-panel navigation autoclose flex>
         <core-toolbar>
           <span>{{menuTitle}}</span>
         </core-toolbar>
@@ -52,6 +52,7 @@
 
   <script>
 
+
     Polymer("main-screen", {
       ready: function() {
         this.pages = this.$.pages;
@@ -60,7 +61,6 @@
         if (detail.isSelected) {
           var selectedItem = detail.item;
           this.pages.selected = selectedItem.attributes.num.value;
-          this.pages.selected.close.closeDrawer();
         }
       }
     });
