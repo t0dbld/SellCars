@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/core-ajax/core-ajax.html">
 
 <polymer-element name="contact-us">
 
@@ -17,7 +18,7 @@
         font-weight: bold;
         font-size: 22px;
       }
-      #paper_input {
+      #name {
         border: 1px solid #bebebe;
         background-color: #fff;
         color:#555;
@@ -26,7 +27,7 @@
         top: 90px;
         position: absolute;
       }
-      #paper_input1 {
+      #email {
         border: 1px solid #bebebe;
         background-color: #fff;
         color:#555;
@@ -35,7 +36,7 @@
         top: 90px;
         position: absolute;
       }
-      #paper_input2 {
+      #message {
         border: 1px solid #bebebe;
         background-color: #fff;
         color:#555;
@@ -61,18 +62,26 @@
         background-color: rgb(250, 247, 247);
       }
     </style>
+        
+    <div id="content">
+    <form id="form" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
     <H1 id="aboutus-header">Want us to find your next car, fill out the form below and well start looking right now!</H1>
-    <div><paper-input willvalidate placeholder="First Name" id="paper_input"></paper-input></div>
-    <div><paper-input willvalidate placeholder="Last Name" id="paper_input1"></paper-input></div>
-    <div><paper-input willvalidate placeholder="email" id="paper_input2"></paper-input></div>
-    <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div>
-    <div><paper-button raised id="submit_button">Submit</paper-button></div>
+    
+    <div><paper-input floatinglabel label="Full Name:" id="name" value="{{name}}"required></paper-input></div>
+    <div><paper-input floatinglabel label="Email:" id="email" value="{{email}}"required></paper-input></div>
+    <div><paper-input floatinglabel multiline label="Tell us about the car you want:" id="message" value="{{message}}"required></paper-input></div>
+    <!-- <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div> -->
+    <div><paper-button  type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button></div>
+    </form></div>
+    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="http://0.0.0.0:3000/contact-api" body='{"name":"{{name}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
   </template>
 
   <script>
-
-    Polymer({
-      
+   
+    Polymer('contact-us', {
+      doSend: function(event, detail, sender){
+         this.$.ajax.go();
+      }
     });
 
   </script>

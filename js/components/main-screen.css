@@ -3,17 +3,18 @@
 /* application font */
 core-scaffold {
     font-family: sans-serif;
+    
 }
 
 /* menu bar of the left panel */
 core-toolbar {
-    background: #000000;
+    background-image: url(../../resources/lollipop.jpg);
     color: #fafafa;
 }
 
 /* content of the left panel */
 core-header-panel {
-    background: #616161;
+    background-color:rgb(208, 208, 208);
     color: #fafafa;
 }
 
@@ -38,21 +39,20 @@ http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-p
 
 /* title bar of the right panel */
 core-scaffold::shadow core-toolbar {
-    background: #000000;
+    background-image: url(../../resources/lollipop.jpg);
     color: #fafafa;
+    
+
     
     
 }
 /* content of the right panel */
 core-scaffold::shadow core-header-panel {
-    background: #616161;
+    background-image: url(../../resources/lollipop.jpg);
     color: #fafafa;
 }
 
-core-scroll-header-panel::shadow core-toolbar {
-    color: #fafafa;
-    
-}
+
 
 /* img border in content section */
 img {
