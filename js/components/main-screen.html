@@ -60,7 +60,7 @@
         if (detail.isSelected) {
           var selectedItem = detail.item;
           this.pages.selected = selectedItem.attributes.num.value;
-          this.$.close.closeDrawer();
+          this.pages.selected.close.closeDrawer();
         }
       }
     });
