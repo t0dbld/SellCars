@@ -80,7 +80,7 @@
     </style>
         
     <div fit id="content">
-    <form id="form" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
+    <form id="form" action="/contact-api" method="POST" enctype="multipart/form-data">
     <H1 id="aboutus-header">Want us to find your next car, fill out the form below and well start looking right now!</H1>
     
     <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required></paper-input></div>
@@ -100,7 +100,7 @@
       doSend: function(event, detail, sender){
          this.$.toast3.show();
          this.$.ajax.go();
-         this.$.form.clear();
+         
       }
     });
 
