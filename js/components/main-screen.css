@@ -10,6 +10,7 @@ core-scaffold {
 core-toolbar {
     background-image: url(../../resources/lollipop.jpg);
     color: #fafafa;
+
 }
 
 /* content of the left panel */
@@ -41,6 +42,8 @@ http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-p
 core-scaffold::shadow core-toolbar {
     background-image: url(../../resources/lollipop.jpg);
     color: #fafafa;
+    font-size: 25px;
+
     
 
     
@@ -60,9 +63,9 @@ img {
     border: 1px solid #bebebe;
     padding: 16px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 0 auto;
     background-color: #fff;
-    color:#555;
-    width: 85%;
+    
+    width: 97%;
     
 }

@@ -6,7 +6,7 @@
 <link rel="import" href="../../bower_components/paper-ripple/paper-ripple.html">
 <link rel="import" href="about-us.html">
 <link rel="import" href="../../bower_components/core-overlay/core-overlay.html">
-<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../bower_components/core-icon-button/core-icon-button.html">
 <link rel="import" href="../../bower_components/core-input/core-input.html">
 <link rel="import" href="contact-us.html">
 <link rel="import" href="locate-us.html">
@@ -18,7 +18,7 @@
 
       <core-header-panel navigation flex>
         <core-toolbar>
-          <span>{{menuTitle}}</span>
+          <div id="navTitle">{{menuTitle}}</div>
         </core-toolbar>
         <core-menu on-core-select="{{selectAction}}">
           <!-- num is personnalized attribute -->
@@ -30,15 +30,16 @@
         </core-menu>
       </core-header-panel>
 
-      <span tool>
+      <div horizontal layout one flex center-justified tool>
         {{mainTitle}}
-        <paper-shadow z="3"></paper-shadow>
+        <paper-shadow z="3"></paper-shadow></div>
+        
 
-      </span>
+      
       
        <div fit class="content">
         
-        <h1><img src="../../car.png"></h1>
+        <h1><img src="../../resources/logo2.png"></h1>
         <core-pages id="pages" selected="0">
           <div><about-us size="1"></about-us></div>
           <div><contact-us></contact-us></div>
