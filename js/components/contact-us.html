@@ -91,7 +91,7 @@
     <paper-toast id="toast3" class="capsule" text="Message sent" style="padding-right: 60px;"></paper-toast>
     
     </form></div>
-    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="http://0.0.0.0:3000/contact-api" body='{"name":"{{name}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
+    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="/contact-api" body='{"name":"{{name}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
   </template>
 
   <script>
