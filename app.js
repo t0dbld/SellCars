@@ -4,7 +4,7 @@ var restify = require('restify')
   , userSave = require('save')('user')
   var server = restify.createServer({ name: 'contact-api' })
  
-server.listen(8000, function () {
+server.listen(3000, function () {
   console.log('%s listening at %s', server.name, server.url)
 })
 server
