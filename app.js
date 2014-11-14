@@ -4,7 +4,7 @@ var restify = require('restify')
   , userSave = require('save')('user')
   var server = restify.createServer({ name: 'contact-api' })
  
-server.listen(3000, function () {
+server.listen(8000, function () {
   console.log('%s listening at %s', server.name, server.url)
 })
 server
@@ -30,15 +30,15 @@ server
 	var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: 'toddgurz@buycarsfrom.me',
-        pass: 'T0ddpatrick'
+        user: 'webserver@buycarsfrom.me',
+        pass: '43110WebPage'
     }
 });
 
 	//mail options
 	mailOpts = {
 		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-		to: 'toddgurz@gmail.com',
+		to: 'toddgurz@buycarsfrom.me',
 		subject: 'Website contact form',
 		text: req.params.name +" " + req.params.email +" " + req.params.message
 	};
