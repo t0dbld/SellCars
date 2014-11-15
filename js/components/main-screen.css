@@ -55,8 +55,14 @@ core-scaffold::shadow core-header-panel {
     color: #fafafa;
 }
 
-
-
+#about-us {
+    height: 500px;
+    border: 1px solid #bebebe;
+    padding: 16px;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: #fff;
+} 
 /* img border in content section */
 img {
 
