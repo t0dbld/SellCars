@@ -43,9 +43,9 @@
     <form id="form" style="::content border: 1px solid #bebebe; padding: 10px; border-radius: 5px; margin: 0 auto; background-color: #fff;" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
     
     
-    <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required style="width:250px"></paper-input></div>
-    <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required></paper-input></div>
-    <div><paper-input floatinglabel multiline label="Tell us about the car you want:" id="message" value="{{message}}"required></paper-input></div>
+    <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required style="width:150px"></paper-input></div>
+    <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required style="width:150px"></paper-input></div>
+    <div><paper-input floatinglabel multiline label="Tell us about the car you want:" id="message" value="{{message}}"required style="width:150px" ></paper-input></div>
     <!-- <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div> -->
     <paper-button  raised onclick="document.querySelector('#toast3').show()"type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button>
     <paper-toast id="toast3" class="capsule" text="Message sent" style="padding-right: 60px;"></paper-toast>
