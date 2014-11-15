@@ -21,12 +21,8 @@
         position: absolute;
       }
 
-      #submit_button {
-        margin: 0 auto;
-        color: #555;
-        position: absolute;
-        top: 450px;
-        
+      #submit_button {        
+        color: #555;        
         background-color: rgb(250, 247, 247);
       }
 
@@ -40,32 +36,53 @@
         
     <div fit>
     
-    <form id="form" style="::content border: 1px solid #bebebe; padding: 10px; border-radius: 5px; margin: 0 auto; background-color: #fff;" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
+    <form id="form" style="::content border: 1px solid #bebebe; padding: 15px; border-radius: 5px; margin: 0 auto; width : 300px; background-color: #fff;" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
     
     
-    <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required style="width:150px"></paper-input></div>
-    <div><paper-input floatinglabel label="Phone #:" type="number" error="not a valid number"id="phone" value="{{phone}}"required validate="^[0-9]*$" style="width:150px"></paper-input></div>
-    <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required style="width:150px"></paper-input></div>
-    <div><paper-input floatinglabel multiline label="Other Details" id="message" value="{{message}}"required style="width:150px"></paper-input></div>
+    <div><paper-input floatinglabel label="Full Name:" type="text" validate="^[aA-Zz]*$" id="name" value="{{name}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel label="Phone #:" type="number" error="not a valid number"id="phone" value="{{phone}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel label="Year Of Vehicle:" type="number" error="not a valid number"id="year" value="{{year}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel label="Make:" type="text" validate="^[aA-Zz]*$" id="make" value="{{make}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel label="Model:" type="text" validate="^[aA-Zz]*$" id="model" value="{{model}}"required style="width:285px"></paper-input></div>
+
+    <div><paper-input floatinglabel multiline label="Trim or Other Details" id="message" value="{{message}}" style="width:285px"></paper-input></div>
     <!-- <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div> -->
-    <paper-button  raised onclick="document.querySelector('#toast3').show()"type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button>
+    <div><paper-button  raised onclick="document.querySelector('#toast3').show()"type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button></div>
+
     <paper-toast id="toast3" class="capsule" text="Message sent" style="padding-right: 60px;"></paper-toast>
     
     </form></div>
-    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="http://0.0.0.0:3000/contact-api" body='{"name":"{{name}}", "phone":"{{phone}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
+    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="http://0.0.0.0:3000/contact-api" 
+    body='{"name":"{{name}}", 
+    "phone":"{{phone}}", 
+     "email":"{{email}}", 
+     "year":"{{year}}",
+     "make":"{{make}}",
+     "model":"{{model}}",
+     "message":"{{message}}"}' response="{{response}}"></core-ajax>
   </template>
 
   <script>
    
     Polymer('contact-us', {
+
       doSend: function(event, detail, sender){
          this.$.ajax.go();
          this.$.toast3.show();
          this.$.name.value = "";
          this.$.phone.value = "";
          this.$.email.value = "";
+         this.$.make.value = "";
+         this.$.model.value = "";
+         this.$.year.value = "";
          this.$.message.value = "";
-         
+
          
       }
     });

@@ -23,8 +23,12 @@ server
  server.post('/contact-api', function (req, res) {
 	console.log(req.params.name);
 	console.log(req.params.email);
+  console.log(req.params.phone);
+  console.log(req.params.year);
+  console.log(req.params.make);
+  console.log(req.params.model);
 	console.log(req.params.message);
-  console.log(req.params.phone)
+  
 	var mailOpts, smtpTrans;
 
 
@@ -41,7 +45,13 @@ server
 		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
 		to: 'toddgurz@buycarsfrom.me',
 		subject: 'Website contact form',
-		text: req.params.name +" " + req.params.email +" "+req.params.phone + " " + req.params.message
+		text: req.params.name +" " +
+          req.params.email +" "+
+          req.params.phone + " " +
+          req.params.year + " " +
+          req.params.make + " " +
+          req.params.model + " "+
+          req.params.message
 	};
 
 	transporter.sendMail(mailOpts, function(error, info){
