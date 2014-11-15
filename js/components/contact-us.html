@@ -20,52 +20,12 @@
         font-size: 22px;
         position: absolute;
       }
-     /* #name {
-        margin: 0 auto;
-        border: 1px solid #bebebe;
-        background-color: #fff;
-        color:#555;
-        padding: 15px;
-        position: absolute;
-        top: 100px;
-        
-        
-      }
-      #email {
-        margin: 0 auto;
-        border: 1px solid #bebebe;
-        background-color: #fff;
-        color:#555;
-        padding: 15px;
-        position: absolute;
-        top: 225px;
-        
-        
-      }
-      #message {
-        margin: 0 auto;
-        border: 1px solid #bebebe;
-        background-color: #fff;
-        color:#555;
-        padding: 15px;
-        position: absolute;
-        top: 350px;
-        
-      }
-      #paper_dropdown {
-        border: 1px solid #bebebe;
-        background-color: #fff;
-        color:#555;
-        padding: 15px;
-        left: 10px;
-        top: 225px;
-        position: absolute;
-      }*/
+
       #submit_button {
         margin: 0 auto;
         color: #555;
         position: absolute;
-        top: 475px;
+        top: 375px;
         
         background-color: rgb(250, 247, 247);
       }
@@ -74,23 +34,14 @@
         color:#1597C7;
       }
 
-      #content {
-        border: 1px solid #bebebe;
-        background-color: #fff;
-        color:#555;
-        padding: 15px;
-        margin:0 auto;
-        height: 500px;
-      }
-
       
-
       
     </style>
         
-    <div fit id="content">
-    <form id="form" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
-    <H1 id="aboutus-header">Want us to find your next car, fill out the form below and well start looking right now!</H1>
+    <div fit>
+    
+    <form id="form" style="::content border: 1px solid #bebebe; padding: 16px; border-radius: 5px; margin: 0 auto; background-color: #fff;" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
+    
     
     <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required></paper-input></div>
     <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required></paper-input></div>
