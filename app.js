@@ -24,6 +24,7 @@ server
 	console.log(req.params.name);
 	console.log(req.params.email);
 	console.log(req.params.message);
+  console.log(req.params.phone)
 	var mailOpts, smtpTrans;
 
 
@@ -40,7 +41,7 @@ server
 		from: req.body.name + ' &lt;' + req.body.email + '&gt;',
 		to: 'toddgurz@buycarsfrom.me',
 		subject: 'Website contact form',
-		text: req.params.name +" " + req.params.email +" " + req.params.message
+		text: req.params.name +" " + req.params.email +" "+req.params.phone + " " + req.params.message
 	};
 
 	transporter.sendMail(mailOpts, function(error, info){

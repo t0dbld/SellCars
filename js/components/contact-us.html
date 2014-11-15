@@ -25,7 +25,7 @@
         margin: 0 auto;
         color: #555;
         position: absolute;
-        top: 375px;
+        top: 450px;
         
         background-color: rgb(250, 247, 247);
       }
@@ -44,22 +44,28 @@
     
     
     <div><paper-input floatinglabel label="Full Name:" type="text" id="name" value="{{name}}"required style="width:150px"></paper-input></div>
+    <div><paper-input floatinglabel label="Phone #:" type="number" error="not a valid number"id="phone" value="{{phone}}"required validate="^[0-9]*$" style="width:150px"></paper-input></div>
     <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required style="width:150px"></paper-input></div>
-    <div><paper-input floatinglabel multiline label="Tell us about the car you want:" id="message" value="{{message}}"required style="width:150px" ></paper-input></div>
+    <div><paper-input floatinglabel multiline label="Other Details" id="message" value="{{message}}"required style="width:150px"></paper-input></div>
     <!-- <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div> -->
     <paper-button  raised onclick="document.querySelector('#toast3').show()"type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button>
     <paper-toast id="toast3" class="capsule" text="Message sent" style="padding-right: 60px;"></paper-toast>
     
     </form></div>
-    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="/contact-api" body='{"name":"{{name}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
+    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="http://0.0.0.0:3000/contact-api" body='{"name":"{{name}}", "phone":"{{phone}}", "email":"{{email}}", "message":"{{message}}"}' response="{{response}}"></core-ajax>
   </template>
 
   <script>
    
     Polymer('contact-us', {
       doSend: function(event, detail, sender){
-         this.$.toast3.show();
          this.$.ajax.go();
+         this.$.toast3.show();
+         this.$.name.value = "";
+         this.$.phone.value = "";
+         this.$.email.value = "";
+         this.$.message.value = "";
+         
          
       }
     });
