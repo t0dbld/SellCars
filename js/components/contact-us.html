@@ -39,19 +39,19 @@
     <form id="form" style="::content border: 1px solid #bebebe; padding: 15px; border-radius: 5px; margin: 0 auto; width : 300px; background-color: #fff;" action="http://0.0.0.0:3000/contact-api" method="POST" enctype="multipart/form-data">
     
     
-    <div><paper-input floatinglabel label="Full Name:" type="text" validate="^[aA-Zz]*$" id="name" value="{{name}}"required style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel label="Full Name:" type="text" validate="^[A-Za-z]*$" id="name" value="{{name}}"required style="width:285px"></paper-input></div>
 
-    <div><paper-input floatinglabel label="Phone #:" type="number" error="not a valid number"id="phone" value="{{phone}}"required style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel label="Phone #:" type="number" error="not a valid number" validate="^[0-9]*$" id="phone" value="{{phone}}"required style="width:285px"></paper-input></div>
 
     <div><paper-input floatinglabel label="Email:" type="email" id="email" value="{{email}}"required style="width:285px"></paper-input></div>
 
-    <div><paper-input floatinglabel label="Year Of Vehicle:" type="number" error="not a valid number"id="year" value="{{year}}"required style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel label="Year Of Vehicle:" type="number" validate="^[0-9]*$" error="not a valid number"id="year" value="{{year}}"required style="width:285px"></paper-input></div>
 
-    <div><paper-input floatinglabel label="Make:" type="text" validate="^[aA-Zz]*$" id="make" value="{{make}}"required style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel label="Make:" type="text" validate="^[A-Za-z]*$" id="make" value="{{make}}"required style="width:285px"></paper-input></div>
 
-    <div><paper-input floatinglabel label="Model:" type="text" validate="^[aA-Zz]*$" id="model" value="{{model}}"required style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel label="Model:" type="text" id="model" value="{{model}}"required style="width:285px"></paper-input></div>
 
-    <div><paper-input floatinglabel multiline label="Trim or Other Details" id="message" value="{{message}}" style="width:285px"></paper-input></div>
+    <div><paper-input floatinglabel multiline label="Trim or Other Details"  id="message" value="{{message}}" style="width:285px"></paper-input></div>
     <!-- <div><paper-dropdown-menu id="paper_dropdown" label="select car model"></paper-dropdown-menu></div> -->
     <div><paper-button  raised onclick="document.querySelector('#toast3').show()"type="submit" on-tap="{{doSend}}" raised id="submit_button">Submit</paper-button></div>
 

@@ -11,6 +11,12 @@
 <link rel="import" href="contact-us.html">
 <link rel="import" href="locate-us.html">
 <link rel="import" href="../../bower_components/google-doc/google-doc.html">
+<link rel="import" href="../../bower_components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/hero-transition.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/cross-fade.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/slide-down.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/slide-up.html">
+<link rel="import" href="../../bower_components/core-animated-pages/transitions/tile-cascade.html">
 <polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
@@ -42,10 +48,20 @@
         
         <h1><img src="../../resources/logo2.png"></h1>
         <core-pages id="pages" selected="0">
-          <div id="aboutus"><h1>About Us</h1><google-doc key="1NFdN-MpuuPu8WhI82QCfvLkvoOWNkptM7Ql7XD0XNzM"styles style="::content border: 1px solid #bebebe; padding: 16px; border-radius: 5px; margin: 0 auto; background-color: #fff;"></google-doc></div>
-          <div><h1>Fill out the form below and well start working for you!</h1><contact-us></contact-us></div>
+          <div>
+          <h1>About Us</h1>
+          <google-doc key="1NFdN-MpuuPu8WhI82QCfvLkvoOWNkptM7Ql7XD0XNzM"styles style="::content border: 1px solid #bebebe; padding: 16px; border-radius: 5px; margin: 0 auto; background-color: #fff;"></google-doc>
+          </div>
+
+          <div>
+          <h1>Fill out the form below and well start working for you!</h1>
+          <contact-us></contact-us>
+          </div>
+
           <div>The Team</div>
+
           <div><locate-us></locate-us></div>
+          
           <div>Testimonials</div>
       </div>
 
