@@ -58,7 +58,7 @@
     <paper-toast id="toast3" class="capsule" text="Message sent" style="padding-right: 60px;"></paper-toast>
     
     </form></div>
-    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url="/contact-api" 
+    <core-ajax id="ajax" auto="false" method="post" contentType="application/json" url=":3000/contact-api" 
     body='{"name":"{{name}}", 
     "phone":"{{phone}}", 
      "email":"{{email}}", 
